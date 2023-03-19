@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row mx-auto">
+        <a href="account/login" style="text-decoration: none;">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'static/icons/guitar.png' %}" style=width:200px; float:center; alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Band/Artist</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </a>
+        <div class="card mx-auto" style="width: 18rem;">
+            <img class="card-img-top" src="{% static 'static/icons/event.png' %}" style=width:200px; margin:auto; alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Post Event</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        <div class="card mx-auto" style="width: 18rem;">
+            <img class="card-img-top" src="{% static 'static/icons/calendar.png' %}" style=width:200px; margin:auto; alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Check Event</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+</div>
+{% endblock content %}

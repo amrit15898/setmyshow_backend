@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Artist Login</h1>
+    <form action="/action_page.php">
+       <div class="form-group">
+        <label for="name">Artist/Band</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Singer</option>
+            <option value="2">Guitarist</option>
+           
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="dob">Name</label>
+        <input type="text" class="form-control" name="dob">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label for="address">Phone</label>
+        <input type="text" class="form-control" name="address">
+      </div>   
+      <div class="form-group">
+        <label for="income">Password</label>
+        <input type="number" class="form-control" name="income">
+      </div>
+    
+            <button type="submit" class="btn mt-5" style="float:right">Submit</button>
+     
+       </form>
+  </div>
+{% endblock content %}
