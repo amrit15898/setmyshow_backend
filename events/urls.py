@@ -3,6 +3,6 @@ from django.urls import path , include
 
 from .views import *
 urlpatterns = [
-    path("",front_page )
-
+   
+    path("get-event/", EventApi.as_view(), name="event_api")
 ]

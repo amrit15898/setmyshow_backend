@@ -25,13 +25,7 @@ SECRET_KEY = "django-insecure-m1drn5)zj%j7(m4r7!dgn+=*yqfbmsek8#ot$*_iotbqqdmvu$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://192.168.1.7:3000',
-                 'http://192.168.1.7:3000'
-                 'http://127.0.0.1:8000/account/get-users',
-                 'http://localhost:3000/show-users',
-                 '127.0.0.1',
-                 'localhost',
-                 '192.168.1.7']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -47,6 +41,7 @@ INSTALLED_APPS = [
     "events",
     "rest_framework",
     'corsheaders',
+    "django_filters"
 ]
 
 MIDDLEWARE = [
@@ -77,7 +72,7 @@ TEMPLATES = [
         },
     },
 ]
-CORS_ORIGIN_ALLOW_ALL=True
+CORS_ORIGIN_ALLOW_ALL = True
 
 WSGI_APPLICATION = "setmyshow.wsgi.application"
 
@@ -136,9 +131,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     BASE_DIR ,"static",
-   
-    
-
 ]
 
 # Base url to serve media files  

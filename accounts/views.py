@@ -120,3 +120,28 @@ class GetSingleUser(APIView):
         })
 
     
+class PersonApi(APIView):
+    def get(self, request):
+        color = request.query_params.get('color')
+        print(color)
+        objs = Person.objects.filter(fav_color = color)
+
+        serializer = PersonSerializer(objs, many=True)
+        return Response({"message": "data fetched succesfullyu",
+                         "data": serializer.data})
+    
+    def post(self, request):
+        data = request.data
+        serializer = PersonSerializer(data = data )
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                "message": "data successfully posted"
+
+            })
+        
+        return Response ({
+            "message": "something went wrong "
+
+        })
+

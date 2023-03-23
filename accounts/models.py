@@ -7,4 +7,8 @@ class User(AbstractUser):
     contact = models.CharField(max_length=20, null=True, blank=True)
 
 
-  
+class Person(models.Model):
+    name = models.CharField(max_length=200)
+    age = models.CharField(max_length=200)
+    fav_color = models.CharField(max_length=200)
+    
